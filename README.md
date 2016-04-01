@@ -27,6 +27,7 @@ You will need:
 
 ### Notes
 
+- The `ex` directory contains an example of an image generated with the script so you can see how it works.
 - The two values at the top of the script deal with image size. As stated in the disclaimer, this has only been tested successfully on 16x16 images, and other image sizes have produced incorrect arrays.
 - To find out the size of the bitmap header in bytes I opened the file in [Frhed](http://frhed.sourceforge.net/en/) and selected all the bytes up to what I could see was the first pixel value.
 - If you experiment and find a good solution to make this more automated or work with more sizes consistently then please submit a pull request and I'll be happy to merge it in.
