@@ -13,7 +13,7 @@ unless filename.reverse[0..2].reverse == "bmp"
   exit
 end
 
-# REMOVE 138 BYTES
+# Remove header bytes
 file = File.open(filename, 'rb').read
 file = file.byteslice(HEADER_BYTES..file.length)
 
@@ -24,7 +24,7 @@ file.reverse.scan(/.{32}/).each do |line|
 end
 file = newFile
 
-# Parse
+# Parse bytes to strings
 hexes = []
 file.scan(/../).each_with_index do |word, i|
   word = word.bytes
